@@ -6,15 +6,51 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Basic Example</h1>
-    <div class="container"></div>
+    <div id="content"></div>
+    <div id="component"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <script type="text/babel">
-            
+      var HelloWorld = React.createClass({
+
+      render: function() {
+        return (
+          <h1 className="page-title">Hello World!</h1>
+        );
+      }
+    });
+
+    ReactDOM.render(<HelloWorld />, document.getElementById('content'));
+
+
+    var ComponentBox = React.createClass({
+
+      render: function() {
+        return (
+          <div className="component-box">
+            <ComponentList />
+          </div>
+        );
+      }
+    });
+
+    var ComponentList = React.createClass({
+
+      render: function() {
+        return (
+          <ul className="component-list">
+            <li className="component-item">First item</li>
+            <li className="component-item">Second item</li>
+          </ul>
+        );
+      }
+    });
+
+     ReactDOM.render(<ComponentBox />, document.getElementById('component'));
+
     </script>
   </body>
 </html>
