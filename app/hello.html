@@ -23,9 +23,6 @@
       }
     });
 
-    ReactDOM.render(<HelloWorld />, document.getElementById('content'));
-
-
     var ComponentBox = React.createClass({
 
       render: function() {
@@ -42,14 +39,57 @@
       render: function() {
         return (
           <ul className="component-list">
-            <li className="component-item">First item</li>
-            <li className="component-item">Second item</li>
+            <li className="component-item">
+              <ComponentAvatar />
+              <ComponentDescription />
+            </li>
+            <li className="component-item">
+              <ComponentAvatar />
+              <ComponentDescription />
+            </li>
           </ul>
         );
       }
     });
 
-     ReactDOM.render(<ComponentBox />, document.getElementById('component'));
+    var ComponentAvatar = React.createClass({
+
+      render: function() {
+        return (
+          <div className="component-avatar">
+            <img className="component-avatar-img" src="images/avatar.jpg" alt="" width="184" height="183" />
+          </div>
+        );
+      }
+    });
+
+    var ComponentDescription = React.createClass({
+
+      render: function() {
+        return (
+          <div className="component-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed velit, fuga reiciendis saepe quo voluptas maiores perferendis molestias non odit libero et necessitatibus, id odio dicta voluptatum maxime quaerat atque.
+          </div>
+        );
+      }
+    });
+
+    var Comments = React.createClass({
+
+      render: function() {
+        return (
+          <div className="comment">
+            <h3 className="comment-author">Author</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat dolor in, numquam aliquid pariatur aut, qui quibusdam illum, suscipit enim rerum aperiam dolorem consequatur eaque distinctio reiciendis nobis sequi!
+            </p>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(<HelloWorld />, document.getElementById('content'));
+    ReactDOM.render(<ComponentBox />, document.getElementById('component'));
 
     </script>
   </body>
