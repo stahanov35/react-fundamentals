@@ -1,0 +1,66 @@
+html,
+body{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+}
+body{
+	flex-direction: column;
+}
+main{
+	flex: 1 1 0;
+}
+/* Support classes */
+.alignright{
+	float: right;
+}
+/* Header */
+#header{
+	background: #5cbc6b;
+	padding: 10px;
+	color: #fff;
+}
+.container:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.title{
+	margin: 0;
+	overflow: hidden;
+	font-size: 22px;
+	line-height: 1;
+	padding: 12px 0;
+}
+
+/* Navigation */
+.nav{
+	position: relative;
+	float: left;
+	margin: 12px 10px 0 0;
+}
+
+#app{
+	padding: 10px;
+}
+/* Comment */
+date{
+	font-size: 11px;
+	display: block;
+	margin: 3px 0;
+}
+.circle{
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 11px;
+	text-align: center;
+	margin: 0 auto;
+	background: #5cbc6b;
+	display: block;
+	border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
